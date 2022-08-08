@@ -1,4 +1,4 @@
-export const openModal = () => {
+export const openServicesList = () => {
   const modal = document.querySelector(".popup-repair-types");
   const link = document.querySelector(".link-list .menu-link");
   const link2 = document.querySelector(".link-list a");
