@@ -14,7 +14,7 @@ export const showMenu = () => {
     if (height < 576) {
       menu.style.transform = `translate3d(0, -100vh, 0)`;
     } else {
-      menu.style.transform = `translate3d(555px, 0, 0)`;
+      menu.style.transform = `translate3d(645px, 0, 0)`;
     }
   });
 };
