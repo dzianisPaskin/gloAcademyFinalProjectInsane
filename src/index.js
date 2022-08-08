@@ -1,4 +1,6 @@
-import {openPhone} from './modules/openPhone'
+import {showHeaderPhone} from './modules/showHeaderPhone'
+import {showMenu} from './modules/showMenu'
 
 
-openPhone()
+showHeaderPhone()
+showMenu()

@@ -16,17 +16,27 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_openPhone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/openPhone */ \"./modules/openPhone.js\");\n\n\n\n(0,_modules_openPhone__WEBPACK_IMPORTED_MODULE_0__.openPhone)()\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_showHeaderPhone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/showHeaderPhone */ \"./modules/showHeaderPhone.js\");\n/* harmony import */ var _modules_showMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/showMenu */ \"./modules/showMenu.js\");\n\n\n\n\n(0,_modules_showHeaderPhone__WEBPACK_IMPORTED_MODULE_0__.showHeaderPhone)()\n;(0,_modules_showMenu__WEBPACK_IMPORTED_MODULE_1__.showMenu)()\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
-/***/ "./modules/openPhone.js":
-/*!******************************!*\
-  !*** ./modules/openPhone.js ***!
-  \******************************/
+/***/ "./modules/showHeaderPhone.js":
+/*!************************************!*\
+  !*** ./modules/showHeaderPhone.js ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"openPhone\": () => (/* binding */ openPhone)\n/* harmony export */ });\nconst openPhone = () => {\n  const arrow = document.querySelector(\".header-contacts__arrow\");\n  const phone = document.querySelector(\n    \".header-contacts__phone-number-accord a\"\n  );\n  const phoneAccord = document.querySelector(\n    \".header-contacts__phone-number-accord\"\n  );\n  let isShow = false;\n\n  arrow.addEventListener(\"click\", () => {\n    if (isShow) {\n      phone.style.opacity = 0;\n      phoneAccord.style.top = 0 + 'px';\n      isShow = false;\n      arrow.style.transform = `rotate(0deg)`;\n    } else {\n      arrow.style.transform = `rotate(180deg)`;\n      phoneAccord.style.top = 25 + 'px';\n      phone.style.opacity = 1;\n      isShow = true;\n    }\n  });\n};\n\n\n//# sourceURL=webpack:///./modules/openPhone.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"showHeaderPhone\": () => (/* binding */ showHeaderPhone)\n/* harmony export */ });\nconst showHeaderPhone = () => {\n  const arrow = document.querySelector(\".header-contacts__arrow\");\n  const phone = document.querySelector(\n    \".header-contacts__phone-number-accord a\"\n  );\n  const phoneAccord = document.querySelector(\n    \".header-contacts__phone-number-accord\"\n  );\n  let isShow = false;\n\n  arrow.addEventListener(\"click\", () => {\n    if (isShow) {\n      phone.style.opacity = 0;\n      phoneAccord.style.top = 0 + 'px';\n      isShow = false;\n      arrow.style.transform = `rotate(0deg)`;\n    } else {\n      arrow.style.transform = `rotate(180deg)`;\n      phoneAccord.style.top = 25 + 'px';\n      phone.style.opacity = 1;\n      isShow = true;\n    }\n  });\n};\n\n\n//# sourceURL=webpack:///./modules/showHeaderPhone.js?");
+
+/***/ }),
+
+/***/ "./modules/showMenu.js":
+/*!*****************************!*\
+  !*** ./modules/showMenu.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"showMenu\": () => (/* binding */ showMenu)\n/* harmony export */ });\n\n\nconst showMenu = () => {\n  const menuIcon = document.querySelector(\".menu__icon\");\n  const menu = document.querySelector(\".popup-dialog-menu\");\n  const closeMenu = document.querySelector(\".close-menu\");\n  let height = document.documentElement.clientWidth;\n\n  menuIcon.addEventListener(\"click\", () => {\n    menu.style.transform = `translate3d(0, 0, 0)`;\n  });\n\n  closeMenu.addEventListener(\"click\", () => {\n    if (height < 576) {\n      menu.style.transform = `translate3d(0, -100vh, 0)`;\n    } else {\n      menu.style.transform = `translate3d(555px, 0, 0)`;\n    }\n  });\n};\n\n\n//# sourceURL=webpack:///./modules/showMenu.js?");
 
 /***/ })
 

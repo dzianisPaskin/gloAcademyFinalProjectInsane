@@ -1,4 +1,4 @@
-export const openPhone = () => {
+export const showHeaderPhone = () => {
   const arrow = document.querySelector(".header-contacts__arrow");
   const phone = document.querySelector(
     ".header-contacts__phone-number-accord a"
