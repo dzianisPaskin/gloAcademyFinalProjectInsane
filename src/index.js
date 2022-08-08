@@ -1,1 +1,4 @@
-console.log('hahahha')
+import {openPhone} from './modules/openPhone'
+
+
+openPhone()
