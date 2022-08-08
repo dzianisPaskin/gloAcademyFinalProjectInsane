@@ -16,7 +16,7 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_showHeaderPhone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/showHeaderPhone */ \"./modules/showHeaderPhone.js\");\n/* harmony import */ var _modules_showMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/showMenu */ \"./modules/showMenu.js\");\n\n\n\n\n(0,_modules_showHeaderPhone__WEBPACK_IMPORTED_MODULE_0__.showHeaderPhone)()\n;(0,_modules_showMenu__WEBPACK_IMPORTED_MODULE_1__.showMenu)()\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_showHeaderPhone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/showHeaderPhone */ \"./modules/showHeaderPhone.js\");\n/* harmony import */ var _modules_showMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/showMenu */ \"./modules/showMenu.js\");\n/* harmony import */ var _modules_smoothScroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/smoothScroll */ \"./modules/smoothScroll.js\");\n\n\n\n\n\n(0,_modules_showHeaderPhone__WEBPACK_IMPORTED_MODULE_0__.showHeaderPhone)()\n;(0,_modules_showMenu__WEBPACK_IMPORTED_MODULE_1__.showMenu)()\n;(0,_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_2__.smoothScroll)()\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -37,6 +37,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"showMenu\": () => (/* binding */ showMenu)\n/* harmony export */ });\n\n\nconst showMenu = () => {\n  const menuIcon = document.querySelector(\".menu__icon\");\n  const menu = document.querySelector(\".popup-dialog-menu\");\n  const closeMenu = document.querySelector(\".close-menu\");\n  let height = document.documentElement.clientWidth;\n\n  menuIcon.addEventListener(\"click\", () => {\n    menu.style.transform = `translate3d(0, 0, 0)`;\n  });\n\n  closeMenu.addEventListener(\"click\", () => {\n    if (height < 576) {\n      menu.style.transform = `translate3d(0, -100vh, 0)`;\n    } else {\n      menu.style.transform = `translate3d(555px, 0, 0)`;\n    }\n  });\n};\n\n\n//# sourceURL=webpack:///./modules/showMenu.js?");
+
+/***/ }),
+
+/***/ "./modules/smoothScroll.js":
+/*!*********************************!*\
+  !*** ./modules/smoothScroll.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"smoothScroll\": () => (/* binding */ smoothScroll)\n/* harmony export */ });\nconst smoothScroll = () => {\n  const menuItems = document.querySelectorAll(\".popup-menu-nav__item>a\");\n  const mainItem = document.querySelector(`a[href='#main']`);\n  const btnFooter = document.querySelector(\".button-footer\");\n\n  const scroll = (e) => {\n    e.preventDefault();\n    const blockID = mainItem.getAttribute(\"href\");\n    document.querySelector(blockID).scrollIntoView({\n      behavior: \"smooth\",\n      block: \"start\",\n    });\n  };\n\n  \n  mainItem.addEventListener(\"click\", scroll);\n  btnFooter.addEventListener(\"click\", scroll);\n\n  menuItems.forEach((anchor) => {\n    anchor.addEventListener(\"click\", function (e) {\n      e.preventDefault();\n\n      const blockID = anchor.getAttribute(\"href\");\n\n      document.querySelector(blockID).scrollIntoView({\n        behavior: \"smooth\",\n        block: \"start\",\n      });\n    });\n  });\n\n};\n\n\n//# sourceURL=webpack:///./modules/smoothScroll.js?");
 
 /***/ })
 
