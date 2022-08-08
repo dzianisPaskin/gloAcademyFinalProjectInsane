@@ -1,0 +1,26 @@
+{
+  "name": "insane",
+  "version": "1.0.0",
+  "description": "GloAcademy Final Project",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "watch": "webpack --watch --mode=development",
+    "server": "webpack serve --mode=development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzianisPaskin/gloAcademyFinalProjectInsane.git"
+  },
+  "author": "Denis Paskin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dzianisPaskin/gloAcademyFinalProjectInsane/issues"
+  },
+  "homepage": "https://github.com/dzianisPaskin/gloAcademyFinalProjectInsane#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  }
+}
